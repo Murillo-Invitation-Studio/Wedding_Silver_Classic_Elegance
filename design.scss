@@ -87,96 +87,6 @@ body{
     }
 }
 
-// ================================================
-// Contador de dias
-// ================================================
-.contador-wrapper{
-    background-color: $color-negro;
-    text-align: center;
-    margin-top: 0;
-
-    h2{     
-        font-family: $font-texto;
-        font-size: $size-texto;
-        color: $color-blanco;
-        margin-bottom: 0;
-    }
-
-    .contador{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: clamp(6px, 2vw, 20px);
-        overflow-x: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        font-family: 'Italic', serif;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        color: $color-blanco;
-
-        &::-webkit-scrollbar{
-            height: 0;
-            display: none;
-        }
-
-        .bloque{
-            flex: 0 0 auto;
-            min-width: clamp(45px, 20vw, 70px);
-            padding: clamp(6px, 1.5vw, 10px);
-            border-radius: 12px;
-            background-color: transparent;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-            opacity: 0; // Aparición suave
-            transform: translateY(8px);
-            animation: fadeUp 0.6s ease forwards;
-
-            &:first-child{
-                border-top: none;
-            }
-
-            &:nth-child(2){
-                animation-delay: .05s;
-            }
-
-            &:nth-child(3){
-                animation-delay: .10s;
-            }
-
-            &:nth-child(4){
-                animation-delay: .15s;
-            }
-        }
-
-        .valor{
-            display: block;
-            font-size: clamp(18px, 5vw, 32px);
-            font-weight: 700;
-            line-height: 1;
-            color: $color-blanco;
-            font-variant-numeric: tabular-nums
-        }
-
-        small {
-            display: block;
-            margin-top: 6px;
-            font-size: clamp(9px, 2vw, 12px);
-            color: $color-blanco;
-            letter-spacing: 0.3px;
-        }
-    }
-    
-    // Mensaje del día del evento
-    .contador-msg {
-        margin-top: 16px;
-        font-family: $font-texto;
-        font-size: clamp(20px, 3.8vw, 50px);
-        font-weight: 600;
-        color: $color-blanco;
-    }
-}
-
 //====================================================
 //  Mensaje de presentacion
 //====================================================
@@ -527,6 +437,95 @@ body{
     }
 }
 
+// ================================================
+// Contador de dias
+// ================================================
+.contador-wrapper{
+    background-color: $color-negro;
+    text-align: center;
+    margin-top: 0;
+
+    h2{     
+        font-family: $font-texto;
+        font-size: $size-texto;
+        color: #eee;
+        margin-bottom: 0;
+    }
+
+    .contador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: clamp(6px, 2vw, 20px);
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        font-family: 'Italic', serif;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        &::-webkit-scrollbar{
+            height: 0;
+            display: none;
+        }
+
+        .bloque{
+            flex: 0 0 auto;
+            min-width: clamp(45px, 20vw, 70px);
+            padding: clamp(6px, 1.5vw, 10px);
+            border-radius: 12px;
+            background-color: transparent;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+            opacity: 0; // Aparición suave
+            transform: translateY(8px);
+            animation: fadeUp 0.6s ease forwards;
+
+            &:first-child{
+                border-top: none;
+            }
+
+            &:nth-child(2){
+                animation-delay: .05s;
+            }
+
+            &:nth-child(3){
+                animation-delay: .10s;
+            }
+
+            &:nth-child(4){
+                animation-delay: .15s;
+            }
+        }
+
+        .valor{
+            display: block;
+            font-size: clamp(18px, 5vw, 32px);
+            font-weight: 700;
+            line-height: 1;
+            color: #eee;
+            font-variant-numeric: tabular-nums
+        }
+
+        small {
+            display: block;
+            margin-top: 6px;
+            font-size: clamp(9px, 2vw, 12px);
+            color: #eee;
+            letter-spacing: 0.3px;
+        }
+    }
+    
+    // Mensaje del día del evento
+    .contador-msg {
+        margin-top: 16px;
+        font-family: $font-texto;
+        font-size: clamp(20px, 3.8vw, 50px);
+        font-weight: 600;
+        color: #eee;
+    }
+}
+
 //====================================================
 //  Animaciones
 //====================================================
@@ -607,8 +606,32 @@ body{
         object-fit: cover;
     }
 
+    // Contador
+    .contador{
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        .valor{
+            font-size: 20px;
+        }
+
+        small{
+            font-size: 10px;
+        }
+    }
+
     // Scroll indicator
     .scroll-indicator{
         margin-top: 8px;
+    }
+}
+
+//====================================================
+//  Animación contador
+//====================================================
+@keyframes fadeUp{
+    to{
+        opacity: 1;
+        transform: none;
     }
 }
