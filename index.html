@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Wedding_Sliver_Classic_Elegance</title> <!--Titulo de la pagina web -->
+        <!--Titulo de la pagina web -->
+        <title>Wedding_Sliver_Classic_Elegance</title>
 
-        <link rel="stylesheet" href="design.css"> <!--design.css estilos para la pagina web -->
-        <script src="script.js" defer></script> <!--script.js codigo para la pagina web -->
+        <!--design.css estilos para la pagina web -->
+        <link rel="stylesheet" href="design.css">
 
+        <!--script.js codigo para la pagina web -->
+        <script src="script.js" defer></script>
+
+        <!-- Link para coneccion de API´s y github -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Google APIs -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet"> <!-- API para texto Allura -->
@@ -13,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Fredoka+One&display=swap" rel="stylesheet"> <!-- API para texto -->
         <link rel="icon" href="https://Murillo-Invitation-Studio.github.io/Wedding_Silver_Classic_Elegance/Image/Novios/FotoPlantilla1.jpeg" sizes="32x32"> <!-- Icono en pestaña dee pagina web -->
 
+        <!-- Metadatos para estetica en navegadores/link/url -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta property="og:title" content="Wedding_Silver_Classic_Elegance"> <!-- Titulo de la pestaña en pagina web -->
@@ -27,19 +33,20 @@
 		<meta name="twitter:description" content="Nuestra historia continúa… y queremos que seas parte de este capítulo."> <!-- Descripción en Twitter -->
 		<meta name="twitter:image" content="https://Murillo-Invitation-Studio.github.io/Wedding_Silver_Classic_Elegance/Image/Novios/FotoPlantilla1.jpeg"> <!-- Imagen en Twitter -->
         <meta name="twitter:label1" content="Tiempo de lectura"> <!-- Tiempo de lectura de twitter -->
-	    <meta name="twitter:data1" content="6 minutos"> <!-- Datos para el tiempo de lectura -->
+        <meta name="twitter:data1" content="6 minutos"> <!-- Datos para el tiempo de lectura -->
 		<meta property="og:locale" content="es_MX"> <!-- Idioma -->
     </head>
     <body>
 		<!----------------------------------------->
         <!-- Portada -->
 		<!----------------------------------------->
+        <!-- Imagen de Portada -->
         <div class="Imagen_Cabezera">
             <img src="https://Murillo-Invitation-Studio.github.io/Wedding_Silver_Classic_Elegance/Image/Novios/FotoPlantilla1.jpeg" class="foto-portada" alt="Novios">
             
             <div class="overlay"></div>
 
-			<!-- Iniciales o nombres de los novios -->
+			<!-- Titulo inicial o nombres de los novios -->
             <div class="Titulo_Cabezera">
                 <h1>Nuestra Boda</h1>
                 <p>A & V</p>
@@ -52,6 +59,50 @@
                 </div>
             </div>
         </div>
+
+        <!------------------------------------------>
+        <!-- Cuenta regresiva para el evento -->
+        <!------------------------------------------>
+        <section class="section contador-wrapper" aria-labelledby="ttl-contador">
+            <h2 id="ttl-contador">¡Para el gran dia faltan!</h2>
+
+            <!-- Contador -->
+            <div id="contador"
+                class="contador"
+                role="timer"
+                aria-live="polite"
+                data-fecha="2026-12-18"
+                data-hora="16:00"
+                data-zona="local">
+            
+                <!-- Bloque Dias -->
+                <div class="bloque">
+                    <span class="valor" id="cd-d">--</span>
+                    <small>Días</small>
+                </div>
+                
+                <!-- Bloque Horas -->
+                <div class="bloque">
+                    <span class="valor" id="cd-h">--</span>
+                    <small>Horas</small>
+                </div>
+                
+                <!-- Bloque Minutos -->
+                <div class="bloque">
+                    <span class="valor" id="cd-m">--</span>
+                    <small>Min</small>
+                </div>
+                
+                <!-- Bloque Segundos -->
+                <div class="bloque">
+                    <span class="valor" id="cd-s">--</span>
+                    <small>Seg</small>
+                </div>
+            </div>
+            
+            <!-- Mensaje cuando llegue el gran día -->
+            <p id="contador-msg" class="contador-msg" hidden>¡Llegó nuestro gran día! 💍🎉</p>
+        </section>
 
 		<!----------------------------------------->
         <!-- Mensaje de Presentacion -->
