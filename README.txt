@@ -21,4 +21,4 @@ Incluye:
 
 Toda invitación incluye:
 	1. Sección Novios.
-  2. Pie de Página.
+    2. Pie de Página.
