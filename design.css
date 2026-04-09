@@ -96,6 +96,35 @@ body {
   height: 50px;
 }
 
+.Padrinos {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 0;
+}
+.Padrinos h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+}
+.Padrinos p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: -25px;
+}
+.Padrinos .Icono_Lazo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -10px auto -40px;
+  height: 100px;
+}
+.Padrinos .Icono_Velacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -60px auto;
+  height: 150px;
+}
+
 .Galeria {
   padding: 10px;
   margin-bottom: 0;

@@ -147,6 +147,41 @@ body{
     }
 }
 
+// ================================================
+// Presentacion de padrinos
+// ================================================
+.Padrinos{
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        margin-top: -25px;
+    }
+
+    .Icono_Lazo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -10px auto -40px;
+        height: 100px;
+    }
+    .Icono_Velacion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: -60px auto;
+        height: 150px;
+    }
+}
+
 //====================================================
 //  Galeria de fotos de novios
 //====================================================
