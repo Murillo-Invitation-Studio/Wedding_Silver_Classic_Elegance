@@ -594,6 +594,22 @@ body {
   color: #eee;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1), transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.inicial {
+  transform: translateY(40px) scale(0.98);
+}
+.reveal.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal p {
+  transition-delay: 0;
+}
+
 @keyframes scrollAnim {
   0% {
     transform: rotate(45deg) translate(0, 0);
