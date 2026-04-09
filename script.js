@@ -1,3 +1,22 @@
+// ==========================================================
+// ====== Reproduccion de musica despues de bienvenida ======
+// ==========================================================
+var audio = document.getElementById("musica");
+var boton = document.getElementById("botonMusica");
+
+function toggleMusica(){
+
+    if(audio.paused){
+        audio.play().catch(()=>{}); // Maneja el error si el navegador bloquea la reproducción automática
+        boton.innerHTML = "❚❚ Detener"; // icono pausa
+    }
+    else{
+        audio.pause();
+        boton.innerHTML = "Reproducir"; // icono play
+    }
+
+}
+
 // =========================================================
 // ========= Movimiento de slides de galeria ===============
 // =========================================================
