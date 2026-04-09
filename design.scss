@@ -1,0 +1,524 @@
+//====================================================
+//  Variables
+//====================================================
+$font-titulos: 'Great Vibes', cursive;
+$font-texto: 'Cormorant Garamond', serif;
+
+$size-titulos: 45px;
+$size-texto: 25px;
+$size-boton: 20px;
+
+$color-grisclaro: #e4e4e4;
+$color-blanco: #fff;
+$color-negro: #000;
+
+$shadow-titulo-pc: 4px 4px 0 $color-negro;
+$shadow-titulo-movil: 3px 3px 0 $color-negro;
+
+//====================================================
+//  Cuerpo de la pagina
+//====================================================
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    background: $color-grisclaro;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+//====================================================
+//  Imagen de portada
+//====================================================
+.Imagen_Cabezera{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $color-negro;
+
+    .foto-portada{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        animation: zoomPortada 25s ease-in-out infinite alternate;
+    }
+    
+    .overlay{
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.2) 20%,
+            rgba(0,0,0,0.4) 40%,
+            rgba(0,0,0,0.6) 60%,
+            rgba(0,0,0,0.8) 80%,
+            rgba(0,0,0,1) 100%
+        );
+    }
+}
+
+// ================================================
+// Nombre de los novios de portada
+// ================================================
+.Titulo_Cabezera{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-blanco;
+    text-align: center;
+    z-index: 5;
+        
+    h1{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        text-shadow: $shadow-titulo-pc;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        text-shadow: $shadow-titulo-pc;
+        white-space: nowrap;
+        margin: 0;
+    }
+}
+
+//====================================================
+//  Mensaje de presentacion
+//====================================================
+.Mensaje_de_los_novios{
+    padding: 0;
+    font-family: $font-texto;
+    font-size: $size-texto;
+}
+
+//====================================================
+//  Presentacion Novios
+//====================================================
+.Novios{
+    padding: 0;
+    margin-bottom: 0;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        margin-top: 50px;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        margin-top: -25px;
+    }
+}
+
+//====================================================
+//  Padres de los novios
+//====================================================
+.Padres{
+    padding-top: 20px;
+    padding-bottom: 1px;
+
+    .Padres_Novio,
+    .Padres_Novia{
+        h2{
+            font-family: $font-titulos;
+            font-size: $size-titulos;
+            margin-top: 10px;
+        }
+
+        p{
+            font-family: $font-texto;
+            font-size: $size-texto;
+            margin-top: -25px;
+        }
+    }
+
+    .Imagen_Novio,
+    .Imagen_Novia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+}
+
+//====================================================
+//  Galeria de fotos de novios
+//====================================================
+.Galeria{
+    padding: 10px;
+    margin-bottom: 0;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        margin: 0;
+    }
+
+    .slider{
+        position: relative;
+        max-width: 500px;
+        margin: 40px auto;
+        overflow: hidden;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .slides_galeria{
+        display: flex;
+        gap: 0;
+        transition: transform 1s ease;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    .slide{
+        flex: 0 0 100%;
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .boton_galeria{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: $color-blanco;
+        border: none;
+        font-size: 28px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+        transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+
+        &:hover{
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+        }
+
+        &:active{
+            transform: translateY(-50%) scale(0.9);
+        }
+
+        &.atras{
+        left: 10px;
+        }
+
+        &.siguiente{
+        right: 10px;
+        }
+    }
+}
+
+//====================================================
+//  Seccion detalles del evento
+//====================================================
+.section{
+    padding: 20px;
+    margin: 0;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    h3{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        margin-top: -25px;
+    }
+}
+
+//====================================================
+//  Detalle del evento (lugar, fecha, hora, etc)
+//====================================================
+.evento{
+    background: $color-blanco;
+    padding: 40px;
+    margin: 0 auto 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h3{
+        margin-bottom: 40px;
+    }
+
+    .Imagen_Ceremonia,
+    .Imagen_Recepcion{
+        max-width: 100%;        
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .Icono_Iglesia{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
+        width: 100px;
+        margin-top: 0
+    }
+
+    .Icono_Casino{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .Icono_Vestimenta{
+        display: flex;
+        margin: 0px auto;
+        height: auto;
+        width: 60px;
+        margin-top: 0;
+    }
+}
+
+//====================================================
+//  Botones (Todos)
+//====================================================
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-family: $font-texto;
+    font-size: $size-boton;
+    background: #111;
+    color: $color-blanco;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+
+    &:hover {
+        background: #333;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+.botonWhatsapp{
+    font-family: $font-texto;
+    font-size: $size-boton;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius :5px;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.55);
+    cursor: pointer;
+
+    &:hover {
+        background-color: #333;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+//====================================================
+//  Confirmacion de asistencia (Formulario)
+//====================================================
+.Confirmacion{
+    text-align: center;
+
+    h2{
+        font-family: $font-titulos;
+        font-size: $size-titulos;
+    }
+
+    p{
+        font-family: $font-texto;
+        font-size: $size-texto;
+        margin-top: -15px;
+        padding: 0 1px;
+    }
+}
+
+//====================================================
+//  Pie de pagina
+//====================================================
+.Pie_de_pagina{
+    text-align: center;
+    background-color: $color-negro;
+    color: $color-blanco;
+    padding: 1px;
+    margin-top: 25px;
+
+    p{
+        font-size: 15px;
+    }
+}
+
+// ================================================
+// Scroll indicador
+// ================================================
+.scroll-indicator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    z-index: 3;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 10px;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+
+    span{
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-top: 0;
+        border-bottom: 4px solid $color-blanco;
+        border-right: 4px solid $color-blanco;
+        transform: rotate(45deg);
+        animation: scrollAnim 1.8s infinite;
+        opacity: 0.8;
+
+        &:nth-child(2) {
+        animation-delay: 0.2s;
+        }
+    }
+}
+
+//====================================================
+//  Division de secicones
+//====================================================
+.divisor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 100%;
+    gap: 10px;
+
+    .linea{
+        flex: 1;
+        height: 1px;
+        background: $color-negro;
+    }
+}
+
+//====================================================
+//  Animaciones
+//====================================================
+@keyframes scrollAnim{
+    0%{
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(45deg) translate(5px, 5px);
+        opacity: 0;
+    }
+}
+
+//====================================================
+//  Zoom para dispositivos moviles
+//====================================================
+@keyframes zoomPortada{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.1);
+    }
+}
+
+//====================================================
+//  Ayudas visuales para PC
+//====================================================
+@media (min-width: 901px){
+    .Imagen_Cabezera{
+        height: 100vh;
+
+        .foto-portada{
+            object-position: center 20%;
+            transform: none;
+            animation: none;
+        }
+    }
+}
+
+//====================================================
+//  Ayudas visuales para dispositivos moviles
+//====================================================
+@media (max-width:600px){
+    .Titulo_Cabezera{
+        h1{
+            font-size: 60px;
+            text-shadow: $shadow-titulo-movil;
+        }
+
+        p{
+            font-size: 50px;
+            text-shadow: $shadow-titulo-movil;
+        }
+    }
+
+    .slider{
+        max-width: 92vw;
+        margin: 20px auto;
+        overflow: hidden;
+        box-shadow: 0 0 6px 2px rgba(0,0,0,0.80);
+    }
+
+    .slides_galeria{
+        display: flex;
+        transition: transform 1s ease;
+    }
+
+    .slide{
+        width: 100%;
+        flex-shrink: 0;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    // Scroll indicator
+    .scroll-indicator{
+        margin-top: 8px;
+    }
+}
