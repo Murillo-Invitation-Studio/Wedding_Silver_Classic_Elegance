@@ -116,3 +116,34 @@ function moverSlide(direccion){
     }
   });
 })();
+
+// ==========================================================
+// ====== Funcionamiento del boton de lluvia de sobres ======
+// ==========================================================
+const botonSobres = document.querySelector(".botonSobres");
+const SobresNota = document.getElementById("SobresNota");
+const CerrarNota = SobresNota.querySelector(".CerrarNota");
+
+botonSobres.addEventListener("click", () => {
+  SobresNota.classList.add("activo");
+  document.body.classList.add("modal-open");
+});
+
+SobresNota.addEventListener("click", (e) => {
+  if (!e.target.closest(".VentanaContenido")) {
+    SobresNota.classList.remove("activo");
+    document.body.classList.remove("modal-open");
+  }
+});
+
+CerrarNota.addEventListener("click", () => {
+  SobresNota.classList.remove("activo");
+  document.body.classList.remove("modal-open");
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    SobresNota.classList.remove("activo");
+    document.body.classList.remove("modal-activo");
+  }
+});

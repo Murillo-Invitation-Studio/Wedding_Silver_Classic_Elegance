@@ -296,6 +296,133 @@ body {
   transform: scale(0.97);
 }
 
+.Mesa_De_Regalos {
+  text-align: center;
+}
+.Mesa_De_Regalos h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+.Mesa_De_Regalos p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.Regalos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.Regalos .Liverpool {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+.Regalos .Liverpool p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: 0;
+}
+.Regalos .Liverpool .Icono_Liverpool {
+  display: flex;
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+}
+.Regalos .Sobres {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+.Regalos .Sobres p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin-top: 0;
+}
+.Regalos .Sobres .Icono_Sobres {
+  display: flex;
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.Ventana {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  height: 100dvh;
+  padding: 20px;
+}
+.Ventana .VentanaContenido {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  padding: 25px 20px 20px 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.Ventana .VentanaContenido p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  margin: 25px;
+}
+.Ventana.activo {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+.Ventana .CerrarNota {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.botonSobres {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.botonSobres:hover {
+  background: #000;
+}
+.botonSobres:active {
+  transform: scale(0.97);
+  background-color: #111;
+}
+
 .Confirmacion {
   text-align: center;
 }
