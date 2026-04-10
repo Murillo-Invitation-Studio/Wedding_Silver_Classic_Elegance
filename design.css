@@ -72,6 +72,19 @@ body {
   margin-top: -25px;
 }
 
+.FotoNovios {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  max-width: 370px;
+  margin: 40px auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.8);
+}
+
 .Padres {
   padding-top: 20px;
   padding-bottom: 1px;
